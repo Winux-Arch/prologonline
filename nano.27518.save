@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Browser Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Execute Commands</h1>
+
+    <form id="commandForm">
+        <label for="commandInput">Enter Command:</label>
+        <input type="text" id="commandInput" name="command" placeholder="e.g., ls -l">
+        <button type="button" onclick="executeCommand()">Execute</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function executeCommand() {
+            // You can add logic here to send the command to the server and handle the response
+            // For simplicity, we'll just display a message in this example
+            var commandInput = document.getElementById('commandInput').value;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Command executed: ' + commandInput;
+        }
+    </script>
+
+</body>
+</html>

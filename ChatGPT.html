@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>🚀 My Browser Application</title>
+      <!-- Bootstrap CSS -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+      <!-- CodeMirror CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css">
+      <!-- CodeMirror Theme (Optional) -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/material-darker.min.css">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <h1 class="mt-4">Execute Commands</h1>
+         <div id="history" class="mb-auto">
+            <h2>Command History</h2>
+            <div id="historyList"></div>
+         </div>
+         <form id="commandForm" class="mt-4">
+            <div class="form-group">
+               <label for="commandInput">Enter Command:</label>
+               <textarea id="commandInput" name="command" class="form-control" rows="5" placeholder="e.g., ls -l"></textarea>
+            </div>
+            <button type="button" class="btn btn-success" onclick="executeCommand()">Execute</button>
+         </form>
+      </div>
+      <!-- Bootstrap JS and Popper.js -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <!-- CodeMirror JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.js"></script>
+      <script src="prolog-mode.js"></script>
+      <!-- Custom JS -->
+      <script src="script.js"></script>
+   </body>
+</html>
